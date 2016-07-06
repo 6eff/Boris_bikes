@@ -6,5 +6,7 @@ describe DockingStation do
     it {expect(subject.release_bike).to be_working}
     it {expect(subject).to respond_to(:dock)}
     # it {expect(subject.dock).to change{DockingStation.stored_bikes}.from(0).to(1)}
-    it{expect(subject.dock).to be_an_instance_of(DockingStation)}
+    it {bike = Bike.new; expect{subject.dock(bike)}.to change{subject.bike}}
+    it {expect(subject).to respond_to(:bikes)}
+    it {expect{subject.bikes}.to output.to_stdout}
 end

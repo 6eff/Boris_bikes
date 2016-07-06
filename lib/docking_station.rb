@@ -1,14 +1,20 @@
 require_relative './bike'
 class DockingStation
-  attribute_reader :docking_station
-def  intialize
-  @docking_station = []
-end
+attr_reader :bike
+@@bikes = []
 	def release_bike
-		Bike.new
+    # if @@bikes.count > 0
+  		Bike.new
+    #   @@bikes -= @bike
+    # else
+    #   'no bikes'
+    # end
 	end
-  def dock
-@docking_station += bike
-
+  def dock(bike)
+    @bike = [bike]
+    @@bikes += @bike
+  end
+  def bikes
+    puts @@bikes
   end
 end
