@@ -1,4 +1,5 @@
 class Bike
+
   def working?
     true
   end
@@ -11,4 +12,5 @@ class Bike
   def fix?
     @fix = true
   end
+
 end

@@ -18,6 +18,7 @@ class DockingStation
     bikes.reject { |bike| bike.broken? }
   end
 end
+
 # class DockingStation
 # attr_reader :bikes
 # attr_reader :capacity
