@@ -8,4 +8,7 @@ class Bike
   def broken?
     @broken
   end
+  def fix?
+    @fix = true
+  end
 end
